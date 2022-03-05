@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - /var/opt/rapp/node_modules
+      - .:/var/opt/rapp
